@@ -12,14 +12,14 @@ const scraperObject = {
         }, 3000);
         const elementHandle = await page.$('#urladdress');
         const textContent = await page.evaluate(el => el.textContent, elementHandle);
-        const link =  await textContent.replace(/(\r\n|\n|\r)/gm, "");
+        const link = textContent.trim();
 
 
 		console.log(link);
 			// Wait for the required DOM to be rendered
 			setTimeout(function() {
 			}, 3000);
-			axios.put('http://localhost:3000/api/hawaslink', {link: link})
+			axios.put('http://localhost:4000/api/hawaslink', {link: link})
 
 		
 	}
