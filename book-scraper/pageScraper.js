@@ -19,7 +19,7 @@ const scraperObject = {
 			// Wait for the required DOM to be rendered
 			setTimeout(function() {
 			}, 3000);
-			axios.put('http://localhost:4000/api/hawaslink', {link: link})
+			axios.put('https://elrasilbot.shop:4000/api/hawaslink', {link: link})
 
 		
 	}
